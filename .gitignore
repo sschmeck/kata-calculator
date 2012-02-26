@@ -1,0 +1,10 @@
+# eclipse
+.settings/
+calculator-core/.settings/
+
+.project
+calculator-core/.project
+calculator-core/.classpath
+
+# maven
+calculator-core/target

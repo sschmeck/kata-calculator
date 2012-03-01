@@ -29,12 +29,14 @@ public class CalculatorController {
 	public void calculate(final String pressContent) {
 		final String calcResult = this.calculator.press(pressContent);
 		if(this.isOperation(pressContent))
-			this.calcModel.addDisplayAndSetInsertContent(calcResult, pressContent);
+			this.calcModel.addDisplayWithSpaceAndSetInsertContent(calcResult, pressContent);
 		if(this.isDigitOrDot(pressContent))
-			this.calcModel.addDisplayAndAddInsertContent(calcResult, pressContent);
+			this.calcModel.addDisplayWithoutSpaceAndSetInsertContent(calcResult, pressContent);
 		if(this.isC(pressContent))
 			this.calcModel.clearModel();
-	}	
+		if(this.isEnter(pressContent))
+			this.calcModel.clearDisplayAndSetContent(calcResult);
+	}
 	
 	private boolean isOperation(String button) {
 		return button.matches("[=*/+-]");
@@ -46,5 +48,9 @@ public class CalculatorController {
 	
 	private boolean isC(String button) {
 		return button.equalsIgnoreCase("c");
+	}
+	
+	private boolean isEnter(String button) {
+		return button.equalsIgnoreCase("=");
 	}
 }

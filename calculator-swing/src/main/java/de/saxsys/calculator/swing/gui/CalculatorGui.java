@@ -14,7 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.LineBorder;
-import javax.swing.border.TitledBorder;
 
 import de.saxsys.calculator.swing.controller.CalculatorController;
 import de.saxsys.calculator.swing.interfaces.ICalculatorGui;
@@ -89,7 +88,7 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 		int buttonIndex = 1;
 		for (int rowIndex = 0; rowIndex < 3; rowIndex++) {
 			for (int columnIndex = 0; columnIndex < 3; columnIndex++) {
-				this.addButton(buttonIndex, rowIndex, columnIndex, buttons, gc);
+				this.addNumberButton(buttonIndex, rowIndex, columnIndex, buttons, gc);
 				buttonIndex++;
 			}
 		}
@@ -153,7 +152,7 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 		return buttons;
 	}
 	
-	private void addButton(final int buttonName, final int row, final int column, 
+	private void addNumberButton(final int buttonName, final int row, final int column, 
 			final JPanel panel, final GridBagConstraints gc) {
 		final JButton button = new JButton(String.valueOf(buttonName));
 		button.setName(String.valueOf(buttonName));
@@ -203,6 +202,5 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 				}
 			}).start();			
 		}		
-	}
-	
+	}	
 }

@@ -9,6 +9,7 @@
 
   <modules>
     <module>calculator-core</module>
+	<module>calculator-swing</module>
   </modules>
 
 </project>

@@ -4,7 +4,7 @@ calculator-core/.settings/
 
 .project
 calculator-core/.project
-calculator-core/.classpath
+.classpath
 
 # maven
-calculator-core/target
+*/target

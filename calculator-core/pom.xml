@@ -10,9 +10,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>${project.parent.groupId}</groupId>
 	<artifactId>calculator-core</artifactId>
-	<version>${project.parent.version}</version>
 	<name>calculator-core</name>
 
 	<dependencies>
@@ -33,6 +31,7 @@
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
 			<plugin>

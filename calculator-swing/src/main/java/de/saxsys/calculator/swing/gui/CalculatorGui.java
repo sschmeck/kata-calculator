@@ -69,8 +69,10 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 		display.setBorder(new LineBorder(Color.BLACK));
 		
 		this.displayField = new JTextField();
+		this.displayField.setName("displayField");
 		this.displayField.setEditable(false);
 		this.insertField = new JTextField();
+		this.insertField.setName("insertField");
 		this.insertField.setEditable(false);
 		
 		display.add(this.displayField, BorderLayout.NORTH);
@@ -99,6 +101,7 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 		gc.fill = GridBagConstraints.HORIZONTAL;
 		gc.weightx = 1;
 		JButton nullButton = new JButton(CalculatorGui.NULL_BUTTON_NAME);
+		nullButton.setName(CalculatorGui.NULL_BUTTON_NAME);
 		nullButton.addActionListener(new ButtonActionListener(CalculatorGui.NULL_BUTTON_NAME));
 		buttons.add(nullButton, gc);
 		
@@ -106,6 +109,7 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 		gc.gridy = 3;
 		gc.gridwidth = 1;
 		JButton dotButton = new JButton(CalculatorGui.DOT_BUTTON_NAME);
+		dotButton.setName(CalculatorGui.DOT_BUTTON_NAME);
 		dotButton.setEnabled(false);
 		dotButton.addActionListener(new ButtonActionListener(CalculatorGui.DOT_BUTTON_NAME));
 		buttons.add(dotButton, gc);
@@ -113,24 +117,28 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 		gc.gridx = 3;
 		gc.gridy = 0;
 		JButton plusButton = new JButton(CalculatorGui.PLUS_BUTTON_NAME);
+		plusButton.setName(CalculatorGui.PLUS_BUTTON_NAME);
 		plusButton.addActionListener(new ButtonActionListener(CalculatorGui.PLUS_BUTTON_NAME));
 		buttons.add(plusButton, gc);
 		
 		gc.gridx = 3;
 		gc.gridy = 1;
 		JButton minusButton = new JButton(CalculatorGui.MINUS_BUTTON_NAME);
+		minusButton.setName(CalculatorGui.MINUS_BUTTON_NAME);
 		minusButton.addActionListener(new ButtonActionListener(CalculatorGui.MINUS_BUTTON_NAME));
 		buttons.add(minusButton, gc);
 		
 		gc.gridx = 3;
 		gc.gridy = 2;
 		JButton multButton = new JButton(CalculatorGui.MULT_BUTTON_NAME);
+		multButton.setName(CalculatorGui.MULT_BUTTON_NAME);
 		multButton.addActionListener(new ButtonActionListener(CalculatorGui.MULT_BUTTON_NAME));
 		buttons.add(multButton, gc);
 		
 		gc.gridx = 3;
 		gc.gridy = 3;
 		JButton divButton = new JButton(CalculatorGui.DIV_BUTTON_NAME);
+		divButton.setName(CalculatorGui.DIV_BUTTON_NAME);
 		divButton.addActionListener(new ButtonActionListener(CalculatorGui.DIV_BUTTON_NAME));
 		buttons.add(divButton, gc);
 		
@@ -140,12 +148,14 @@ public class CalculatorGui extends JFrame implements ICalculatorGui {
 		gc.weighty = 0.5;
 		gc.fill = GridBagConstraints.BOTH;
 		JButton cButton = new JButton(CalculatorGui.C_BUTTON_NAME);
+		cButton.setName(CalculatorGui.C_BUTTON_NAME);
 		cButton.addActionListener(new ButtonActionListener(CalculatorGui.C_BUTTON_NAME));
 		buttons.add(cButton, gc);
 		
 		gc.gridx = 4;
 		gc.gridy = 2;
 		JButton enterButton = new JButton(CalculatorGui.ENTER_BUTTON_NAME);
+		enterButton.setName(CalculatorGui.ENTER_BUTTON_NAME);
 		enterButton.addActionListener(new ButtonActionListener(CalculatorGui.ENTER_BUTTON_NAME));
 		buttons.add(enterButton, gc);
 		

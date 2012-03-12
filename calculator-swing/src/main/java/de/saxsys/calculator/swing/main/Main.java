@@ -9,6 +9,8 @@ import de.saxsys.calculator.swing.controller.CalculatorController;
 public class Main {
 
 	public static void main(String[] args) {
-		new CalculatorController();
+		CalculatorController controller = new CalculatorController();
+		controller.initModel();
+		controller.initGui();
 	}
 }

@@ -16,10 +16,16 @@ public class CalculatorController {
 	private CalculatorModel calcModel;
 	
 	public CalculatorController() {
-		this.calcModel = new CalculatorModel();
+		this.calculator = new Calculator();
+	}
+	
+	public void initModel() {
+		this.calcModel = new CalculatorModel();		
+	}
+	
+	public void initGui() {
 		this.calcGui = new CalculatorGui(this);
 		this.calcGui.setVisible(true);
-		this.calculator = new Calculator();
 	}
 	
 	public void addListenerToModel(ICalculatorGui listener) {
